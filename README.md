@@ -20,6 +20,6 @@ pip install -r req.txt
 Команда помощи: >>>help
 ## Авторы
 
-- [@KailUser](https://github.com/KailUser/) - основной код [Оригинал](https://github.com/KailUser/JRAT_ORIGINAL)
+- [@KailUser](https://github.com/KailUser/) - основной код [[Оригинал]](https://github.com/KailUser/JRAT_ORIGINAL)
 - [@kararasenok-gd](https://github.com/kararasenok-gd) - Перевод + добавление преколов + парочка команд
 
