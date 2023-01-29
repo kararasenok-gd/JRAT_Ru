@@ -8,6 +8,7 @@ P.S Можете использовать [AutoPyToExe](http://pypi.org/project/
 ```bash
 pip install -r req.txt
 ```
+или запускаем install.bat
 3. Меняем токен в main.py (Последняя строка = запуск бота, в нём и есть токен который нужно указать)
 4. Запускаем start.bat или main.py
 5. Готово!
