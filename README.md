@@ -11,10 +11,10 @@ P.S Можете использовать [AutoPyToExe](http://pypi.org/project/
 pip install -r req.txt
 ```
 
-2.2 запускаем install.bat
+2.2 Запускаем [install.bat](https://github.com/kararasenok-gd/JRAT_Ru/blob/main/install.bat)
 
-3. Меняем токен в main.py (Последняя строка = запуск бота, в нём и есть токен который нужно указать)
-4. Запускаем start.bat или main.py
+3. Меняем токен в [main.py](https://github.com/kararasenok-gd/JRAT_Ru/blob/main/main.py) (Последняя строка = запуск бота, в нём и есть токен который нужно указать)
+4. Запускаем [start.bat](https://github.com/kararasenok-gd/JRAT_Ru/blob/main/start.bat) или [main.py](https://github.com/kararasenok-gd/JRAT_Ru/blob/main/main.py)
 5. Готово!
 
 Команда помощи: >>>help
