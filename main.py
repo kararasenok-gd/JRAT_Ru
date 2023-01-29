@@ -14,7 +14,7 @@ import shutil
 
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='>>>', intents=intents)
-id = 998279211276042414
+id = main_bot_channel_id
 
 
 
