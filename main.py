@@ -256,7 +256,17 @@ async def play(ctx, arg = None, arg2 = None):
 				raise e
 
 
-
+@client.command(help = 'Типо запись экрана через скриншоты')
+async def record(ctx, repeats = 1):
+	for b in range(repeats):
+		for a in range(10):
+			frame_record = pyautogui.screenshot()
+			frame_record.save('frame.png')
+			with open('frame.png', 'rb') as f:
+				file = discord.File(f, filename='frame.png')
+				await ctx.send(file=file)
+				file.close()
+			os.remove('frame.png')
 
 
 
