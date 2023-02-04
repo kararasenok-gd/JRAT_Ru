@@ -23,3 +23,7 @@ pip install -r req.txt
 - [@KailUser](https://github.com/KailUser/) - основной код [[Оригинал]](https://github.com/KailUser/JRAT_ORIGINAL)
 - [@kararasenok-gd](https://github.com/kararasenok-gd) - Перевод + добавление преколов + парочка команд
 
+## Изменения (04.02.2023)
+1. Добавлены команды **>>>play** и **>>>rmfile**
+2. В информации при запуске добавлен айпи и регион (страна и город)
+
